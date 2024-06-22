@@ -1,0 +1,138 @@
+/* Styles généraux */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police de caractère */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9; /* Couleur de fond */
+}
+
+header {
+    background-color: #fb8500; /* Couleur de fond de l'en-tête */
+    color: white; /* Couleur du texte de l'en-tête */
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre de l'en-tête */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Taille de la police */
+}
+
+main {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem 0;
+    background-color: white; /* Couleur de fond de la section principale */
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Ombre de la section principale */
+    border-radius: 10px; /* Bords arrondis */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espacement entre les éléments */
+    margin-bottom: 2rem;
+}
+
+form input, form button {
+    padding: 0.75rem; /* Espacement interne */
+    font-size: 1rem; /* Taille de la police */
+    border: 1px solid #ddd; /* Bordure */
+    border-radius: 5px; /* Bords arrondis */
+    outline: none; /* Suppression du contour par défaut */
+}
+
+form input:focus, form button:focus {
+    border-color: #9c7a52; /* Couleur de la bordure en focus */
+    box-shadow: 0 0 0 2px rgba(241, 173, 94, 0.2); /* Ombre en focus */
+}
+
+form button {
+    background-color: #fb8500; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition de la couleur de fond */
+}
+
+form button:hover {
+    background-color: #c58030; /* Couleur de fond au survol */
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espacement entre les tâches */
+}
+
+.task-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd; /* Bordure des cartes de tâche */
+    border-radius: 10px; /* Bords arrondis */
+    background-color: #fff; /* Couleur de fond */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Ombre des cartes */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transitions pour l'ombre et la translation */
+}
+
+.task-card:hover {
+    transform: translateY(-5px); /* Translation vers le haut au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre au survol */
+}
+
+.task-card h3 {
+    margin: 0;
+    font-size: 1.5rem; /* Taille de la police */
+    color: #333; /* Couleur du texte */
+}
+
+.task-card p {
+    margin: 0.5rem 0;
+    color: #666; /* Couleur du texte */
+}
+
+.task-card button {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    background-color: #ff4c4c; /* Couleur de fond du bouton de suppression */
+    color: white; /* Couleur du texte du bouton */
+    border: none;
+    border-radius: 5px; /* Bords arrondis */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition de la couleur de fond */
+}
+
+.task-card button:hover {
+    background-color: #e44b4b; /* Couleur de fond au survol */
+}
+
+/* Styles pour le message de confirmation */
+#confirmation-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4caf50; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 1rem 2rem;
+    border-radius: 5px; /* Bords arrondis */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Ombre */
+    opacity: 0; /* Transparence initiale */
+    transition: opacity 0.5s, transform 0.5s; /* Transition pour l'opacité et la translation */
+}
+
+#confirmation-message.show {
+    opacity: 1; /* Opacité visible */
+    transform: translateY(-10px); /* Translation vers le haut */
+}
+
+.hidden {
+    display: none; /* Cache l'élément */
+}

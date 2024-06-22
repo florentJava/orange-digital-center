@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord des Tâches</title> <!-- Titre de la page -->
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <header>
+        <h1>Gestionnaire de Tâches</h1> <!-- En-tête de la page -->
+    </header>
+    <main>
+        <form id="task-form"> <!-- Formulaire pour ajouter une tâche -->
+            <input type="text" id="task-name" placeholder="Nom de la tâche" required> <!-- Champ pour le nom de la tâche -->
+            <input type="text" id="task-desc" placeholder="Description de la tâche" required> <!-- Champ pour la description de la tâche -->
+            <input type="date" id="task-deadline" required> <!-- Champ pour la date limite de la tâche -->
+            <button type="submit">Ajouter la tâche</button> <!-- Bouton pour soumettre le formulaire -->
+        </form>
+        <div id="task-list"></div> <!-- Liste des tâches ajoutées -->
+    </main>
+    <div id="confirmation-message" class="hidden">Tâche ajoutée avec succès!</div> <!-- Message de confirmation caché -->
+    <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>
